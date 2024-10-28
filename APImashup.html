@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<!-- Website title and logo -->	
+<!-- title-->
+	<title>API Mashup</title>
+	<meta name="author"	content="A API Mashup web application combining WeatherAPI and TicketMaster APIs"> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CDN Links -->	
+	<!-- Material Design Bootstrap Framework-->
+		<!-- Font Awesome -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+		
+		<!-- MDB -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
+
+<!-- Local CSS File -->
+	<link rel="stylesheet" href="APImashup.css">
+</head>
+
+<body>
+
+	<!--Header Section. Search Bar-->
+	<header>
+		<div class="container text-center mb-4 pt-3" id="weather-header">
+			<img src="travelio-high-resolution-logo-transparent.png" id="logo" alt="Website Logo">
+			<form class="weather-search" autocomplete="off">
+				<input type="text" id="search" placeholder="Search for your City">
+				<button type="button" class="btn btn-primary" id="search-button">Search!</button>
+			</form>
+
+		</div>
+	</header>
+
+	<!-- Main Local Section-->
+	<!-- Dummy information was used for framing. JS passes the actual info into the elements-->
+	<main>
+		<div class="container">
+			<div class="card py-3 px-2 text-center" id="main-card">
+				<div class="row align-items-center">
+					<div class="col-md p-3">
+						<img id="img-main" src="https://www.freeiconspng.com/thumbs/sun-icon/sun-icon-31.png"
+							alt="Current Weather Icon">
+						<h1 id="condition-main">Test</h1>
+						<p id="feels_like-main">Test</p>
+					</div>
+					<div class="col-md">
+						<h1 id="temp-main">Test</h1>
+						<h4 id="current-location">Test</h4>
+						<p class="my-0" id="location-code">Test</p>
+						<p class="my-0 mb-3" id="time-main">Test</p>
+					</div>
+				</div>
+				<div class="row text-center mt-5">
+					<div class="col">
+						<h5>Pressure</h5>
+						<p id="pressure-main"></p>
+					</div>
+					<div class="col">
+						<h5>Humidity</h5>
+						<p id="humidity-main"></p>
+					</div>
+					<div class="col">
+						<h5>Wind</h5>
+						<p id="wind-main"></p>
+					</div>
+					<div class="col">
+						<h5>Gust</h5>
+						<p id="gust-main"></p>
+					</div>
+					<div class="col">
+						<h5>UV</h5>
+						<p id="uv-main"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Section for Forecast Items. Javascript writes the items in-->
+		<section>
+			<div class="container align-items-center" id="forecast"></div>
+		</section>
+
+		<!--Section for Ticketmaster Items. Javascript writes the items in-->
+		<div class="container mt-5 mb-5" id="events">
+			<h2 class="text-center display-4 py-3">Events in the Area</h2>
+		</div>
+	</main>
+
+	
+	<!-- FOOTER -->
+	<footer class="bg-dark text-center text-white">
+		<div class="container p-4 pb-0">
+
+			<!-- Section: Social media -->
+			<section class="social-media mb-4" tabindex="0">
+				<h4>Get In Touch!</h4>
+
+				<!-- Email-->
+				<a class="btn text-white btn-floating m-1" id="email"
+					href="mailto:2611280@dundee.ac.uk" role="button"><i class="bi bi-envelope-check"></i></a>
+
+				<!-- Linkedin -->
+				<a class="btn text-white btn-floating m-1" id="linkedin"
+					href="https://www.linkedin.com/in/varendrasaith/" role="button"><i class="bi bi-linkedin"></i></a>
+
+				<!-- Github -->
+				<a class="btn text-white btn-floating m-1" id="github"
+					href="https://github.com/Varendraaa" role="button"><i class="bi bi-github"></i></a>
+			</section>
+		</div>
+
+		<!-- Copyright Section -->
+		<div class="text-center p-3">
+			© 2023 Copyright: Varendra Saith
+			<p>University of Dundee</p>
+		</div>
+	</footer>
+
+
+
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	
+	<!-- Local JS File-->
+	<script src="APImashup.js"></script>
+</body>
+
+</html>
